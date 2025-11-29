@@ -33,7 +33,7 @@
     <script>
       $(function () {
         var headerHight = 70 //ヘッダーの高さ
-        $('a[href^=#]').click(function () {
+        $('a[href^="#"]').click(function () {
           var href = $(this).attr('href')
           var target = $(href == '#' || href == '' ? 'html' : href)
           var posi = target.offset().top - headerHight //ヘッダーの高さ分位置をずらす
@@ -44,47 +44,8 @@
     </script>
   </head>
   <body>
-    <!-- Header Section -->
-    <header id="header">
-      <div class="header pc_only">
-        <nav class="flex-col">
-          <div class="h_left">
-            <h1><a href="../index.html">SunnyWardGames</a></h1>
-          </div>
-          <ul class="pc_header flex-col">
-            <li class="pagelink left-border">
-              <a href="../index.html">ホーム</a>
-            </li>
-            <li class="pagelink left-border">
-              <a href="../works.html">公開中のゲーム</a>
-            </li>
-            <li class="pagelink left-border">
-              <a href="../privacypolicy/index.html">プライバシーポリシー</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header sp_only">
-        <nav class="page-nav">
-          <ul>
-            <li class="close"><span></span></li>
-            <li class="pagelink"><a href="../index.html">ホーム</a></li>
-            <li class="pagelink"><a href="../works.html">公開中のゲーム</a></li>
-            <li class="pagelink">
-              <a href="../privacypolicy/index.html">プライバシーポリシー</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex-col">
-          <div class="" id="hamburger">
-            <span></span>
-          </div>
-          <div class="h_center">
-            <h1><a href="../index.html">SunnyWardGames</a></h1>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- Header Section (共通化) -->
+    <div id="header-container"></div>
     <!-- End header Section -->
 
     <div class="height70px"></div>
@@ -119,98 +80,15 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="footer">
-      <div class="footer container-fluid">
-        <div class="sns">
-          <ul>
-            <li>
-              <a href="../works.html">
-                公開中のゲーム
-              </a>
-            </li>
-            <li>
-              <a href="../privacypolicy/index.html">
-                プライバシーポリシー
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="sns">
-          <ul>
-            <li>
-              <a
-                href="https://twitter.com/swgames_jp"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="../img/square-twitter.svg"
-                  alt="twitter"
-                  class="hover_c"
-                />
-                twitter
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/sunnywardgames/"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="../img/instagram.svg" alt="instagram" class="hover_c" />
-                instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://play.google.com/store/apps/developer?id=SunnyWardGames"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="../img/google-play.svg"
-                  alt="googleplay"
-                  class="hover_c"
-                />
-                Android
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com/jp/developer/yoku-takahashi/id1078480151"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="../img/app-store-ios.svg"
-                  alt="appstore"
-                  class="hover_c"
-                />
-                iOS
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="copyright">
-          <p>Copyright ©2022 SunnyWardGames All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer Section (共通化) -->
+    <div id="footer-container"></div>
 
     <!-- scroll Top -->
     <div id="pagetop">
       <a href="#top"><img src="../img/chevron-up-solid.svg" alt="" /></a>
     </div>
     <!-- Script -->
-    <script src="./app.js"></script>
-    <script type="text/javascript"></script>
+    <script src="../load-components.js"></script>
 
     <link
       rel="stylesheet"
@@ -241,6 +119,6 @@
       })
     </script>
    
-    <script src="modal.js"></script>
+    <script src="../modal.js"></script>
   </body>
 </html>

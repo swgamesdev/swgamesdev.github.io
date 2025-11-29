@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="description" content="swg-web" />
+    <!-- Specified Commercial Transactions Act (SCTA) -->
+    <title>Specified Commercial Transactions Act</title>
+    <!-- jqueryのCDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- コンポーネント読み込みスクリプト -->
+    <script src="./load-components.js"></script>
+    <!-- scrollTop リンクのズレ補正 -->
+    <script>
+        $(function () {
+            var headerHight = 70 //ヘッダーの高さ
+            $('a[href*="#"]').click(function () {
+                var href = $(this).attr('href')
+                var target = $(href == '#' || href == '' ? 'html' : href)
+                var posi = target.offset().top - headerHight //ヘッダーの高さ分位置をずらす
+                $('html, body').animate({ scrollTop: posi }, 500, 'swing')
+                return false
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <div class="height70px"></div>
+
+    <!-- SCTA Section -->
+    <section class="contents">
+        <div class="container">
+            <h2>特定商取引法に基づく表示</h2>
+            <table class="scta-table">
+                <tr>
+                    <td>販売業者</td>
+                    <td>請求があった場合は遅滞なく開示します</td>
+                </tr>
+                <tr>
+                    <td>運営責任者</td>
+                    <td>高橋 陽区</td>
+                </tr>
+                <tr>
+                    <td>所在地</td>
+                    <td>請求があった場合には速やかに開示いたします</td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td>請求があった場合には速やかに開示いたします</td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td>sunny.ward.dev@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>サイトURL</td>
+                    <td><a href="https://sunnywardgames.com/">https://sunnywardgames.com/</a></td>
+                </tr>
+                <tr>
+                    <td>販売価格</td>
+                    <td>各寄付プラットフォームに記載の金額</td>
+                </tr>
+                <tr>
+                    <td>商品代金以外の必要料金</td>
+                    <td>なし</td>
+                </tr>
+                <tr>
+                    <td>代金の支払い方法</td>
+                    <td>クレジットカード決済、PayPal<br />（各寄付プラットフォームに準ずる）</td>
+                </tr>
+                <tr>
+                    <td>代金の支払い時期</td>
+                    <td>ご注文時に即時決済<br />（各寄付プラットフォームに準ずる）</td>
+                </tr>
+                <tr>
+                    <td>サービスの性質</td>
+                    <td>寄付プラットフォーム（Github sponsors、Buy me a
+                        coffee、ko-fi）で募集している金銭は、当ソフトウェアの開発・維持を支援するための純粋な寄付であり、寄付金と引き換えに特別な機能、サービス、または優遇措置が提供されることは一切ありません。
+                    </td>
+                </tr>
+                <tr>
+                    <td>返品・交換・解約に関する特約</td>
+                    <td>役務の性質上、返品・返金は不可</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Script -->
+    <script src="./load-components.js"></script>
+    <script src="./app.js"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>

@@ -17,21 +17,13 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <!-- ナビの表示・非表示 -->
-    <script>
-      $(function () {
-        const ham = $('#hamburger, .close, .pagelink')
-        const nav = $('.page-nav')
-        ham.on('click', function () {
-          nav.toggleClass('toggle')
-        })
-      })
-    </script>
+    <!-- コンポーネント読み込みスクリプト -->
+    <script src="./load-components.js"></script>
     <!-- scrollTop リンクのズレ補正 -->
     <script>
       $(function () {
         var headerHight = 70
-        $('a[href^=#]').click(function () {
+        $('a[href*="#"]').click(function () {
           var href = $(this).attr('href')
           var target = $(href == '#' || href == '' ? 'html' : href)
           var posi = target.offset().top - headerHight
@@ -55,50 +47,9 @@
     </script>
   </head>
   <body>
-    <!-- Header Section -->
-    <header id="header">
-      <div class="header pc_only">
-        <nav class="flex-col">
-          <div class="h_left">
-            <h1><a href="index.html">SunnyWardGames</a></h1>
-          </div>
-          <ul class="pc_header flex-col">
-            <li class="pagelink left-border">
-              <a href="index.html">ホーム</a>
-            </li>
-            <li class="pagelink left-border">
-              <a href="works.html">公開中のゲーム</a>
-            </li>
-            <li class="pagelink left-border"><a href="SCTA/index.html">特定商取引法に基づく表記</a></li>
-            <li class="pagelink left-border">
-              <a href="privacypolicy/index.html">プライバシーポリシー</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header sp_only">
-        <nav class="page-nav">
-          <ul>
-            <li class="close"><span></span></li>
-            <li class="pagelink"><a href="index.html">ホーム</a></li>
-            <li class="pagelink"><a href="works.html">公開中のゲーム</a></li>
-            <li class="pagelink"><a href="SCTA/index.html">特定商取引法に基づく表記</a></li>
-            <li class="pagelink">
-              <a href="privacypolicy/index.html">プライバシーポリシー</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex-col">
-          <div class="" id="hamburger">
-            <span></span>
-          </div>
-          <div class="h_center">
-            <h1><a href="index.html">SunnyWardGames</a></h1>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- End header Section -->
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
     <div class="height70px"></div>
 
     <!-- Works Section -->
@@ -116,8 +67,6 @@
                 <span class="app_name">FuzzyGrave</span>
                 <p>
                   FuzzyGrave（ファジーグレイブ）は自動戦闘ハクスラRPGです。
-                  <br />
-                  ８つの腕を操る主人公が、異空間に発生した ”巣” の破壊を依頼されるところから物語は始まります。
               </p>
               </div>
           </div>
@@ -736,98 +685,13 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <!-- Footer Section -->
-    <footer id="footer">
-      <div class="footer container-fluid">
-        <div class="sns">
-          <ul>
-            <li>
-              <a href="works.html">
-                公開中のゲーム
-              </a>
-            </li>
-            <li>
-              <a href="privacypolicy/index.html">
-                プライバシーポリシー
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="sns">
-          <ul>
-            <li>
-              <a
-                href="https://twitter.com/swgames_jp"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="img/square-twitter.svg"
-                  alt="twitter"
-                  class="hover_c"
-                />
-                twitter
-              </a>
-            </li>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
 
-            <li>
-              <a
-                href="https://www.instagram.com/sunnywardgames/"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="img/instagram.svg" alt="instagram" class="hover_c" />
-                instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://play.google.com/store/apps/developer?id=SunnyWardGames"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="img/google-play.svg"
-                  alt="googleplay"
-                  class="hover_c"
-                />
-                Android
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com/jp/developer/yoku-takahashi/id1078480151"
-                class="hover_p"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="img/app-store-ios.svg"
-                  alt="appstore"
-                  class="hover_c"
-                />
-                iOS
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="copyright">
-          <p>Copyright ©2022 SunnyWardGames All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- scroll Top -->
-    <div id="pagetop">
-      <a href="#top"><i class="fas fa-angle-up"></i></a>
-    </div>
     <!-- Script -->
+    <script src="./load-components.js"></script>
     <script src="./app.js"></script>
+    <script type="text/javascript"></script>
     <script type="text/javascript"></script>
   </body>
 </html>
