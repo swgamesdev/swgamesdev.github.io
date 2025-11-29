@@ -627,3 +627,24 @@ body {
     padding-bottom: 70px;
   }
 }
+
+/* Table Styles */
+.scta-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.scta-table tr {
+  border: 1px solid #ccc;
+}
+
+.scta-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.scta-table td:first-child {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
